@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script>
+  $(document).ready(function(){
+
+    var position = 1;
+    $("#tabLeft").css("background-color", "green");
+
+    $("#tabLeft").click(function(){
+      $(".container").animate({scrollLeft: 0},500);
+      position = 1;
+    });
+
+    $("#tabCentre").click(function(){
+      var width = $(".container").width();
+      $(".container").animate({scrollLeft: width},500);
+      position = 2;
+    });
+
+    $("#tabRight").click(function(){
+      var width = $(".container").width();
+      var a = width * 2;
+      $(".container").animate({scrollLeft: a},500);
+      position = 3;
+    });
+
+    $("#leftArrow").click(function(){
+      var leftPos = $('.container').scrollLeft();
+      var width = $(".slider1").width();
+      $(".container").animate({scrollLeft: leftPos - width}, 500);
+      if (position != 1) {
+        position = position - 1;
+      } else {
+        position = position;
+      }
+    });
+
+    $("#rightArrow").click(function(){
+      var leftPos = $('.container').scrollLeft();
+      var width = $(".slider1").width();
+      $(".container").animate({scrollLeft: leftPos + width}, 500);
+      if (position != 3) {
+        position = position + 1;
+      } else {
+        position = 1;
+        $(".container").animate({scrollLeft: 0},500);
+      }
+    });
+
+    $(".tabIndicater, .arrows").click(function(){
+      if (position == 1) {
+        $("#tabLeft").css("background-color", "green");
+        $("#tabCentre").css("background-color", "grey");
+        $("#tabRight").css("background-color", "grey");
+      } else if (position == 2) {
+        $("#tabLeft").css("background-color", "grey");
+        $("#tabCentre").css("background-color", "green");
+        $("#tabRight").css("background-color", "grey");
+      } else if (position == 3) {
+        $("#tabLeft").css("background-color", "grey");
+        $("#tabCentre").css("background-color", "grey");
+        $("#tabRight").css("background-color", "green");
+      }
+    });
+
+  });
+  </script>
+</head>
+<body>
+  <div class="container">
+    <div class="innerContainer">
+      <div class="slider1">
+        <h1>Lamborghini Miura</h1>
+        <img width="500px" src="image1.jpg">
+      </div>
+      <div class="slider2">
+        <h1>Lancia Delta</h1>
+        <img width="500px" src="image2.jpg">
+      </div>
+      <div class="slider3">
+        <h1>Jaguar E-Type</h1>
+        <img width="500px" src="image3.jpg">
+      </div>
+    </div>
+  </div>
+  <div class="tabIndicater" id="tabLeft" tabindex="1"></div>
+  <div class="tabIndicater" id="tabCentre" tabindex="2"></div>
+  <div class="tabIndicater" id="tabRight" tabindex="3"></div>
+  <br><br>
+  <img src="leftArrow.jpg" class="arrows" id="leftArrow" width="5%;">
+  <img src="rightArrow.jpg" class="arrows" id="rightArrow" width="5%" style="float:right">
+</body>
+</html>

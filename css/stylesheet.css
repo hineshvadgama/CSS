@@ -6,19 +6,23 @@
 .sliderContainer {
   position: relative;
   display: block;
+  width: 100%;
+  margin-top: 50px;
 }
 
 .arrowContainer {
   position: relative;
   width: 75%;
+  height: 400px;
   margin-left: 12.5%;
+  border: 1px solid green;
 }
 
 .viewingContainer {
   position: relative;
   background-color: red;
   width: 100%;
-  min-height: 400px;
+  height: 400px;
   overflow-x: hidden;
 }
 
@@ -52,7 +56,7 @@
 .innerSliderContainer {
   position: relative;
   width: 300%;
-  min-height: 450px;
+  height: 400px;
   background-color: purple;
 }
 
@@ -90,12 +94,17 @@
 }
 
 .tabs {
+  position: absolute;
+  bottom: 5px;
+  width: 100%;
+  text-align: center;
 }
 
 .tabIndicater {
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 5%;
+  height: 10px;
+  margin-left: 1%;
   background-color: grey;
 }
 

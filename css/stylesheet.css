@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.sliderContainer {
+  position: relative;
+  display: block;
+}
+
+.arrowContainer {
+  position: relative;
+  width: 75%;
+  margin-left: 12.5%;
+}
+
+.viewingContainer {
+  position: relative;
+  background-color: red;
+  width: 100%;
+  min-height: 400px;
+  overflow-x: hidden;
+}
+
+.arrows {
+  position: absolute;
+  z-index: 1;
+  width: 5%;
+}
+
+#leftArrow {
+  left: 0;
+  top: 180px;
+}
+
+#rightArrow {
+  right: 0px;
+  top: 180px;
+}
+
+.arrows:hover {
+  cursor: pointer;
+}
+
+.leftArrow {
+  float: left;
+}
+
+.rightArrow {
+  float: right;
+}
+.innerSliderContainer {
+  position: relative;
+  width: 300%;
+  min-height: 450px;
+  background-color: purple;
+}
+
+.slider1 {
+  width: 33.33%;
+  float: left;
+  text-align: center;
+  background-color: orange;
+}
+
+.slider1 img {
+  width: 500px;
+}
+
+.slider2 {
+  width: 33.33%;
+  float: left;
+  text-align: center;
+  background-color: blue;
+}
+
+.slider2 img {
+  width: 500px;
+}
+
+.slider3 {
+  width: 33.33%;
+  float: left;
+  text-align: center;
+  background-color: green;
+}
+
+.slider3 img {
+  width: 500px;
+}
+
+.tabs {
+}
+
+.tabIndicater {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: grey;
+}
+
+.tabIndicater:hover {
+  cursor: pointer;
+}

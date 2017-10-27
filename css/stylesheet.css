@@ -15,15 +15,14 @@
   width: 75%;
   height: 400px;
   margin-left: 12.5%;
-  border: 1px solid green;
 }
 
 .viewingContainer {
   position: relative;
-  background-color: red;
   width: 100%;
   height: 400px;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .arrows {
@@ -57,40 +56,29 @@
   position: relative;
   width: 300%;
   height: 400px;
-  background-color: purple;
 }
 
 .slider1 {
   width: 33.33%;
+  height: 400px;
   float: left;
   text-align: center;
-  background-color: orange;
-}
-
-.slider1 img {
-  width: 500px;
 }
 
 .slider2 {
   width: 33.33%;
   float: left;
   text-align: center;
-  background-color: blue;
-}
-
-.slider2 img {
-  width: 500px;
 }
 
 .slider3 {
   width: 33.33%;
   float: left;
   text-align: center;
-  background-color: green;
 }
 
-.slider3 img {
-  width: 500px;
+.sliderImage {
+  max-height: 400px;
 }
 
 .tabs {

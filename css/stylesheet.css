@@ -99,3 +99,7 @@
 .tabIndicater:hover {
   cursor: pointer;
 }
+
+.tabIndicater:focus {
+  outline: none;
+}
